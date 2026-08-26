@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "New book",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["isbn", "amazon_url", "author", "language", "pages", "publisher", "title", "year"],
+  "properties": {
+    "isbn": { "type": "string", "minLength": 1 },
+    "amazon_url": { "type": "string", "format": "uri" },
+    "author": { "type": "string", "minLength": 1 },
+    "language": { "type": "string", "minLength": 1 },
+    "pages": { "type": "integer", "minimum": 1 },
+    "publisher": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "year": { "type": "integer", "minimum": 0 }
+  }
+}
